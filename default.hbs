@@ -8,7 +8,13 @@
 
     {{! Page Meta }}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+
+    {{#if post}}
+       <meta name="description" content="{{#post}}{{excerpt words="50"}}
+    {{/post}}" />
+    {{else}}
+        <meta name="description" content="{{meta_description}}" />
+    {{/if}}
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,9 +41,11 @@
             <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h2>
             <h3 class="blog-description">{{@blog.description}}</h3>
 
+            <!--
             <form id="search">
                 <input id="search-field" placeholder="Search"/>
             </form>
+            -->
 
             <div id="sidebar-links">
                 <ul id="subscription-links">
@@ -49,6 +57,7 @@
                 <ul id="navigation">
                     {{navigation}}
                 </ul>
+                <br />
                 <ul id="sidebar-external">
                     {{> sidebar-external}}
                 </ul>
