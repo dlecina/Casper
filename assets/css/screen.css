@@ -132,19 +132,20 @@ h4, h5, h6 {
     line-height: 1;
     margin-top: 0;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4.2rem;
     line-height: 1.2em;
-    letter-spacing: -2px;
+    letter-spacing: .05em;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     line-height: 1.2em;
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     text-indent: -2px;
 }
 
@@ -181,7 +182,9 @@ h4 a, h5 a, h6 a {
 
 
 p, ul, ol, dl {
-    margin: 1.6em 0;
+    margin: 0.8em 0;
+    line-height: 1.7em;
+    font-size: 1.7rem;
 }
 
 ol ol, ul ul,
@@ -252,9 +255,11 @@ code, tt {
     font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
-    background: #22313F;
-    color: #f8f8f2;
+    /* background: #22313F; */
+    /* color: #f8f8f2; */
     border-radius: 0.3em;
+    border: 0.15em solid #9eabb3;
+    margin: 0 2px 0 2px;
 }
 
 pre {
@@ -278,6 +283,7 @@ pre code, pre tt {
     background: transparent;
     border: none;
     padding: 0;
+    color: #f8f8f2;
 }
 
 kbd {
@@ -597,12 +603,12 @@ main
     right: 0px;
     top: 0px;
     bottom: 0px;
-    padding: 4rem 15%;
+    padding: 4rem 10%;
 }
 
 .main-inner
 {
-    max-width: 800px;
+    max-width: 960px;
 }
 
 #search
