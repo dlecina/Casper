@@ -32,7 +32,7 @@
     <div class="site-wrapper">
 
         {{!-- Sidebar (Landscape) / Header (Portrait) --}}
-        <div id="sidebar" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}}>
+        <div id="sidebar" {{#if @site.cover_image}}style="background-image: url({{@site.cover_image}})"{{/if}}>
             <div>
                 {{!-- Header --}}
                 {{> "site-header"}}
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <nav class="main-nav">
-                {{#if @blog.navigation}}
+                {{#if @site.navigation}}
                 {{navigation}}
                 {{/if}}
             </nav>
