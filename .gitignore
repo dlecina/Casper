@@ -23,6 +23,10 @@ projectFilesBackup
 
 dist/
 
+config.json
+changelog.md
+changelog.md.bk
+
 # StayPuft
 partials/custom/nav-external.hbs
 partials/custom/disqus.hbs

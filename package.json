@@ -3,7 +3,7 @@
     "description": "A personal blogging theme for Ghost. Beautiful, minimal and responsive.",
     "homepage": "https://github.com/dlecina/StayPuft",
     "demo": "https://github.com/dlecina/StayPuft#demo",
-    "version": "2.9.4",
+    "version": "2.9.6",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
@@ -19,7 +19,8 @@
         "test": "gscan .",
         "pretest": "gulp build",
         "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
+        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
+        "postship": "git fetch && gulp release"
     },
     "author": {
         "name": "David Lecina",
@@ -47,7 +48,8 @@
         "https://github.com/dlecina/StayPuft/graphs/contributors"
     ],
     "devDependencies": {
-        "autoprefixer": "9.4.10",
+        "@tryghost/release-utils": "0.3.1",
+        "autoprefixer": "9.5.0",
         "beeper": "1.1.1",
         "cssnano": "4.1.10",
         "gscan": "2.3.0",
